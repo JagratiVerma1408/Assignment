@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".fragments.ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/viewBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#ffffff">
+        <ImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_user"
+            android:layout_centerVertical="true"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:id="@+id/txtDisplayName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/imgProfilePic"/>
+
+        <TextView
+            android:id="@+id/txtDisplayNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/imgProfilePic"
+            android:layout_below="@+id/txtDisplayName"/>
+
+        <TextView
+            android:id="@+id/txtDisplayMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/imgProfilePic"
+            android:layout_below="@+id/txtDisplayNumber"/>
+
+        <TextView
+            android:id="@+id/txtDisplayAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/imgProfilePic"
+            android:layout_below="@+id/txtDisplayMail"
+            android:layout_marginBottom="25dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
