@@ -11,7 +11,7 @@
         android:id="@+id/imgLogoFront"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/front_logo"
+        android:src="@drawable/bibbasket"
         android:layout_centerInParent="true"/>
 
 </RelativeLayout>

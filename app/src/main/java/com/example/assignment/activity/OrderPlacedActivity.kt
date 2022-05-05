@@ -21,7 +21,8 @@ class OrderPlacedActivity : AppCompatActivity() {
         sharedPreferences.edit().putBoolean("order_placed",true).apply()
         DeleteAllItem(this)
         btnOk.setOnClickListener {
-            onBackPressed()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
     class DeleteAllItem(val context: Context) : AsyncTask<Void, Void, Boolean>() {
