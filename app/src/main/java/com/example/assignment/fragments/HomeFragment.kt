@@ -1,18 +1,13 @@
 package com.example.assignment.fragments
 
-import android.app.Activity
 import android.app.AlertDialog
-import android.app.Dialog
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.provider.Settings
 import android.view.*
-import androidx.fragment.app.Fragment
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.Toast
-import androidx.core.app.ActivityCompat
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -26,14 +21,22 @@ import com.example.assignment.model.restaurant
 import com.example.assignment.util.ConnectionManager
 import org.json.JSONException
 import java.util.*
-import kotlin.Comparator
-import kotlin.collections.HashMap
 
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class HomeFragment : Fragment() {
+
+    private val images = arrayOf<Int>(
+        R.drawable.download1,
+        R.drawable.download2,
+        R.drawable.download3,
+        R.drawable.download4,
+        R.drawable.images1,
+        R.drawable.images2
+    )
+
 
     lateinit var recyclerHome: RecyclerView
 
