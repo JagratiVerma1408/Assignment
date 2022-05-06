@@ -7,20 +7,20 @@
     tools:context=".fragments.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/viewBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
         android:background="#ffffff">
         <ImageView
             android:id="@+id/imgProfilePic"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:src="@drawable/ic_user"
             android:layout_centerVertical="true"
             android:layout_margin="20dp"/>
-
         <TextView
             android:id="@+id/txtDisplayName"
             android:layout_width="match_parent"
@@ -65,6 +65,8 @@
             android:layout_below="@+id/txtDisplayMail"
             android:layout_marginBottom="25dp"/>
 
-    </RelativeLayout>
+
+
+    </LinearLayout>
 
 </FrameLayout>

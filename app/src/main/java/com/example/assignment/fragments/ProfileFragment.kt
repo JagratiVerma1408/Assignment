@@ -49,10 +49,10 @@ class ProfileFragment : Fragment() {
         txtMail = view.findViewById(R.id.txtDisplayMail)
         txtAddress = view.findViewById(R.id.txtDisplayAddress)
 
-        val name:String? = sharedPreferences.getString("name", "")
-        val number: String? = sharedPreferences.getString("mobile_number", "")
-        val mail: String? = sharedPreferences.getString("email", "")
-        val address:String? = sharedPreferences.getString("address", "")
+        val name:String? = "Name : "+sharedPreferences.getString("name", "")
+        val number: String? = "Number : "+sharedPreferences.getString("mobile_number", "")
+        val mail: String? = "Email Id : "+sharedPreferences.getString("email", "")
+        val address:String? = "Address : "+sharedPreferences.getString("address", "")
 
         txtName.text = name
         txtNumber.text = number

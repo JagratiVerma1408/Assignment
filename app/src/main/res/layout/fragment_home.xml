@@ -5,12 +5,71 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HomeFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerHome"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_margin="5dp"/>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:background="#fff"
+                android:layout_height="match_parent"
+                android:src="@drawable/download1"/>
+            <HorizontalScrollView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="#c1c1c1"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/download2"
+                        android:backgroundTint="#fff"/>
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:background="#c1c1c1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/images1"/>
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:background="#c1c1c1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/download3"
+                        android:backgroundTint="#fff"/>
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:background="#c1c1c1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:backgroundTint="#fff"
+                        android:src="@drawable/download4"/>
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:background="#fff"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/images2"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="5dp"/>  </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
 
     <RelativeLayout
         android:id="@+id/progressLayout"
