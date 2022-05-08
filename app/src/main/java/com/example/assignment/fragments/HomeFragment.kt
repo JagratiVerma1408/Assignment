@@ -2,6 +2,7 @@ package com.example.assignment.fragments
 
 import android.app.AlertDialog
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.view.*
 import android.widget.ProgressBar
@@ -11,6 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import butterknife.BindView
+import butterknife.ButterKnife
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
@@ -19,6 +22,9 @@ import com.example.assignment.R
 import com.example.assignment.adapter.HomeRecyclerAdapter
 import com.example.assignment.model.restaurant
 import com.example.assignment.util.ConnectionManager
+import com.tomoima.infiniterotation.InfiniteRotationAdapter
+import com.tomoima.infiniterotation.InfiniteRotationView
+import com.tomoima.infiniterotation.ItemInfo
 import org.json.JSONException
 import java.util.*
 
@@ -67,6 +73,8 @@ class HomeFragment : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
+    @BindView(R.id.infinite_rotation_view)
+    internal lateinit var rotationView: InfiniteRotationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -99,6 +107,11 @@ class HomeFragment : Fragment() {
 
         val url = "http://13.235.250.119/v2/restaurants/fetch_result/"
 
+
+        ButterKnife.bind(this,view)
+        val items = createItems()
+        rotationView.setAdapter(InfiniteRotationAdapter(items))
+        rotationView.autoScroll(items.size, 2000)
         if(ConnectionManager().checkConnectivity(activity as Context)){
             val jsonObjectRequest =object: JsonObjectRequest(Request.Method.GET, url,null, Response.Listener{
                 try {
@@ -206,4 +219,16 @@ class HomeFragment : Fragment() {
                 }
             }
     }
+    override fun onDestroy() {
+        super.onDestroy()
+        rotationView.stopAutoScroll()
+    }
+    private fun createItems() = Array(4, { i ->
+        ItemInfo(i.toString(),
+            Color.rgb(
+                (Math.random() * 255).toInt(),
+                (Math.random() * 255).toInt(),
+                (Math.random() * 255).toInt()))
+    }).toList()
+}
 }
