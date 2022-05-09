@@ -29,13 +29,14 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"/>
         </RelativeLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerRestaurant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/heading"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

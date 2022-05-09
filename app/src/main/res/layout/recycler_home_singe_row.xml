@@ -2,30 +2,38 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="135dp"
+    android:elevation="100dp"
+    app:cardElevation="120dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
     android:layout_margin="6dp"
-    app:cardCornerRadius="4dp">
+    app:cardCornerRadius="20dp">
     <LinearLayout
         android:id="@+id/llContent"
         android:layout_width="match_parent"
         android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
         android:orientation="horizontal"
         android:background="#ffffff"
         android:layout_marginTop="10dp"
         android:weightSum="6">
-
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="5dp"
+            android:elevation="10dp">
         <ImageView
-            android:layout_weight="1.5"
             android:id="@+id/imgRestaurantImage"
-            android:layout_width="0dp"
+            android:layout_width="110dp"
             android:layout_height="110dp"
             android:padding="5dp"
             android:scaleType="centerCrop"
             android:background="#000000"/>
-
+        </androidx.cardview.widget.CardView>
         <RelativeLayout
-            android:layout_weight="3.3"
+            android:layout_weight="4.5"
             android:layout_width="0dp"
             android:layout_height="match_parent">
             <TextView
@@ -73,14 +81,15 @@
             android:layout_weight="1.2"
             android:layout_height="match_parent"
             >
+
             <ImageView
                 android:id="@+id/imgFav"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp"
                 android:layout_marginTop="7dp"
-                android:src="@drawable/ic_fav_select"
-                android:clickable="true"/>
+                android:clickable="true"
+                android:padding="4dp"
+                android:src="@drawable/ic_fav_select" />
 
             <TextView
                 android:id="@+id/txtRating"

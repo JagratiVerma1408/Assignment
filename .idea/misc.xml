@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Assignment123/app/src/main/res/drawable-anydpi/ic_home.xml" value="0.1705" />
         <entry key="..\:/Assignment123/app/src/main/res/drawable-xhdpi/active_dot.xml" value="0.121" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/activity_cart.xml" value="0.10989583333333333" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/activity_forgot_password.xml" value="0.10989583333333333" />
@@ -16,13 +17,15 @@
         <entry key="..\:/Assignment123/app/src/main/res/layout/drawer_header.xml" value="0.10989583333333333" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/fragment_favourite.xml" value="0.10989583333333333" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/fragment_history.xml" value="0.10989583333333333" />
-        <entry key="..\:/Assignment123/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Assignment123/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/fragment_menu.xml" value="0.10989583333333333" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/fragment_profile.xml" value="0.136" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/item_home_slider.xml" value="0.10989583333333333" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/recycler_cart_single_row.xml" value="0.10989583333333333" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/recycler_history_food_items.xml" value="0.10989583333333333" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/recycler_history_single_row.xml" value="0.10989583333333333" />
+        <entry key="..\:/Assignment123/app/src/main/res/layout/recycler_home_singe_row.xml" value="0.22826086956521738" />
+        <entry key="..\:/Assignment123/app/src/main/res/layout/recycler_menu_single_row.xml" value="0.22826086956521738" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/view_infinite_rotation.xml" value="0.22826086956521738" />
         <entry key="..\:/Assignment123/app/src/main/res/layout/view_simple.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/PRATYAKSH777/Desktop/Assignment/Assignment/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1705" />

@@ -2,14 +2,12 @@ package com.example.assignment.fragments
 
 import android.app.AlertDialog
 import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
 import android.view.*
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
@@ -99,9 +97,7 @@ class HomeFragment : Fragment() {
         val queue = Volley.newRequestQueue(activity as Context)
 
         val url = "http://13.235.250.119/v2/restaurants/fetch_result/"
-
-
-
+        
         if(ConnectionManager().checkConnectivity(activity as Context)){
             val jsonObjectRequest =object: JsonObjectRequest(Request.Method.GET, url,null, Response.Listener{
                 try {
@@ -129,12 +125,6 @@ class HomeFragment : Fragment() {
 
                             recyclerHome.layoutManager = layoutManager
 
-                            recyclerHome.addItemDecoration(
-                                DividerItemDecoration(
-                                    recyclerHome.context,
-                                    (layoutManager as LinearLayoutManager).orientation
-                                )
-                            )
                         }
 
                     }else{
